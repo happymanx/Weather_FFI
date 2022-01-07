@@ -1,0 +1,3 @@
+/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86/CMakeFiles/rebuild_cache.dir
+/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86/CMakeFiles/edit_cache.dir
+/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86/CMakeFiles/weather.dir

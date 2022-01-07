@@ -1,0 +1,3 @@
+ninja: Entering directory `/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86'
+[1/2] Building C object CMakeFiles/weather.dir/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/src/weather.c.o
+[2/2] Linking C shared library /Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/build/app/intermediates/cmake/debug/obj/x86/libweather.so

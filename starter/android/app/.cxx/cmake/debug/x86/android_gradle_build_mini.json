@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/CMakeLists.txt",
+    "/Users/ipad1hukuibio.com/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/ipad1hukuibio.com/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/ipad1hukuibio.com/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/ipad1hukuibio.com/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "weather-Debug-x86": {
+      "artifactName": "weather",
+      "buildCommand": "/Users/ipad1hukuibio.com/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/android/app/.cxx/cmake/debug/x86\" weather",
+      "abi": "x86",
+      "output": "/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/build/app/intermediates/cmake/debug/obj/x86/libweather.so",
+      "runtimeFiles": []
+    }
+  }
+}

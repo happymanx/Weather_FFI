@@ -1,0 +1,9 @@
+# ninja log v5
+1	73	1641490555	CMakeFiles/weather.dir/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/src/weather.c.o	d2e476b7af6a2a64
+73	128	1641490555	/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/build/app/intermediates/cmake/debug/obj/arm64-v8a/libweather.so	87bf0acaa0ab9b7d
+0	83	1641544830	CMakeFiles/weather.dir/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/src/weather.c.o	d2e476b7af6a2a64
+84	153	1641544830	/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/build/app/intermediates/cmake/debug/obj/arm64-v8a/libweather.so	87bf0acaa0ab9b7d
+0	73	1641549604	CMakeFiles/weather.dir/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/src/weather.c.o	d2e476b7af6a2a64
+74	125	1641549604	/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/build/app/intermediates/cmake/debug/obj/arm64-v8a/libweather.so	87bf0acaa0ab9b7d
+0	109	1641550245	CMakeFiles/weather.dir/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/src/weather.c.o	d2e476b7af6a2a64
+109	163	1641550245	/Users/ipad1hukuibio.com/StudioProjects/CallingNativeLibrariesInFlutterWithDartFFI_Materials/starter/build/app/intermediates/cmake/debug/obj/arm64-v8a/libweather.so	87bf0acaa0ab9b7d
