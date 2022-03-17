@@ -51,9 +51,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Happy Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
       ),
-      home: const MyHomePage(title: 'Happy Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Happy Flutter Demo Page'),
     );
   }
 }
@@ -84,9 +84,12 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+              ),
                 child: const Text('Temperature'),
                 onPressed: () async {
                   _show(_ffiBridge.getTemperature());
