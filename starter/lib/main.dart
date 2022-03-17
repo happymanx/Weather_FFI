@@ -72,7 +72,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _show(message) {
     showDialog(
-        builder: (ctx) => AlertDialog(content: Text(message.toString())),
+        builder: (ctx) => AlertDialog(
+            content: Text(message.toString()),
+            backgroundColor: Colors.lightBlueAccent,
+            shape: const StadiumBorder(),
+            contentTextStyle: const TextStyle(color: Colors.white),
+        ),
         context: context);
   }
 
