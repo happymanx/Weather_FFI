@@ -114,6 +114,30 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   _show(_ffiBridge.getThreeDayForecast(true));
                 }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+                ),
+                child: const Text('Hello World'),
+                onPressed: () {
+                  _ffiBridge.printHelloWorld();
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+                ),
+                child: const Text('Name'),
+                onPressed: () {
+                  _show(_ffiBridge.getName());
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightBlue),
+                ),
+                child: const Text('Print And Get'),
+                onPressed: () {
+                  _show(_ffiBridge.printAndGet('猜猜我是誰？'));
+                }),
           ],
         ),
       ),

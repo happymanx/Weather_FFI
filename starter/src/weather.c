@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 double get_temperature()
 {
@@ -53,3 +54,31 @@ struct ThreeDayForecast get_three_day_forecast(bool useCelsius) {
 3. Converts these values to Celsius if useCelsius is true.
 4. Returns the struct.
 */
+
+void hello_world()
+{
+    printf("[CPP]: Hello World!!!\n");
+}
+
+char *getName()
+{
+    return "My name is 黑皮棉";
+}
+
+char *cPrintAndGet(char *str)
+{
+    char *new_str;
+    if((new_str = malloc(strlen("此為快樂返還值：")+strlen(str)+1)) != NULL){
+        new_str[0] = '\0';   // ensures the memory is an empty string
+        strcat(new_str, "此為快樂返還值：");
+        strcat(new_str, str);
+    } else {
+        printf("malloc failed!\n");
+        // exit?
+    }
+
+    printf("[CPP]: %s\n", str);
+    free(str);
+
+    return new_str;
+}

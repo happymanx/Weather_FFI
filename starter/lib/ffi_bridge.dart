@@ -7,6 +7,13 @@ typedef TemperatureFunctionDart = double Function();
 typedef ForecastFunction = Pointer<Utf8> Function();
 typedef ForecastFunctionDart = Pointer<Utf8> Function();
 
+typedef HelloFunction = Void Function();
+typedef HelloFunctionDart = void Function();
+typedef NameFunction = Pointer<Int8> Function();
+typedef NameFunctionDart = Pointer<Int8> Function();
+typedef PrintAndGetFunction = Pointer<Int8> Function(Pointer<Int8>);
+typedef PrintAndGetFunctionDart = Pointer<Int8> Function(Pointer<Int8>);
+
 class ThreeDayForecast extends Struct {
   // 1
   @Double()
@@ -47,6 +54,10 @@ class FFIBridge {
   ForecastFunctionDart _getForecast;
   ThreeDayForecastFunctionDart _getThreeDayForecast;
 
+  HelloFunctionDart _printHelloWorld;
+  NameFunctionDart _getName;
+  PrintAndGetFunctionDart _printAndGet;
+
   FFIBridge() {
     // 1
     final dl = Platform.isAndroid
@@ -66,6 +77,24 @@ class FFIBridge {
 
     _getThreeDayForecast = dl.lookupFunction<ThreeDayForecastFunction,
         ThreeDayForecastFunctionDart>('get_three_day_forecast');
+
+    final _hello_worldPtr =
+    dl.lookup<NativeFunction<HelloFunction>>('hello_world');
+    _printHelloWorld = _hello_worldPtr.asFunction<HelloFunctionDart>();
+    // 以上可合併如此行程式碼
+    // _getHelloWorld = dl.lookupFunction<HelloFunction,
+    //     HelloFunctionDart>('hello_world');
+
+    final _getNamePtr =
+    dl.lookup<NativeFunction<NameFunction>>('getName');
+    _getName = _getNamePtr.asFunction<NameFunctionDart>();
+    print('[Dart]: 有返回值 -> '+_getName().cast<Utf8>().toDartString());
+
+    final _cPrintAndGetPtr =
+    dl.lookup<NativeFunction<PrintAndGetFunction>>('cPrintAndGet');
+    _printAndGet = _cPrintAndGetPtr.asFunction<PrintAndGetFunctionDart>();
+    print('[Dart]: 有返回值 -> '+_printAndGet('我就是預設文'.toNativeUtf8().cast<Int8>())
+        .cast<Utf8>().toDartString());
   }
 
   // 5
@@ -80,6 +109,22 @@ class FFIBridge {
 
   ThreeDayForecast getThreeDayForecast(bool useCelsius) {
     return _getThreeDayForecast(useCelsius ? 1 : 0);
+  }
+
+  // 無傳參數，無返回值
+  void printHelloWorld() {
+    _printHelloWorld();
+  }
+
+  // 無傳參數，有返回值
+  String getName() {
+    return _getName().cast<Utf8>().toDartString();
+  }
+
+  // 有傳參數，有返回值
+  String printAndGet(String str) {
+    return _printAndGet(str.toNativeUtf8().cast<Int8>())
+        .cast<Utf8>().toDartString();
   }
 }
 
