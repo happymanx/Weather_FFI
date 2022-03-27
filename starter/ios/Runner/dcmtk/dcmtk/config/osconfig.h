@@ -51,17 +51,17 @@
 #define DCMTK_PREFIX "/usr/local"
 
 /* Define the default data dictionary path for the dcmdata library package */
-#define DCM_DICT_DEFAULT_PATH "/usr/local/share/dcmtk/dicom123.dic"
+#define DCM_DICT_DEFAULT_PATH "/usr/local/share/dcmtk/dicom.dic"
 
 /* Define the type of standard dictionary that we want to use:
    0 - Do not load any default dictionary on startup
    1 - Load builtin dictionary on startup
    2 - Load external (i.e. file-based) dictionary on startup
 */
-#define DCM_DICT_DEFAULT 2
+#define DCM_DICT_DEFAULT 1
 
 /* Define whether dictionaries defined through DCMDICTPATH variable should be loaded */
-#define DCM_DICT_USE_DCMDICTPATH 1
+#define DCM_DICT_USE_DCMDICTPATH 0
 
 /* Define the environment variable path separator */
 #define ENVIRONMENT_PATH_SEPARATOR ':'

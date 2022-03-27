@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
-		4112899527F06F2E002F56CD /* dicom.dic in Resources */ = {isa = PBXBuildFile; fileRef = 4112899427F06F2E002F56CD /* dicom.dic */; };
 		41C10AAF27EEB2250042512F /* weather.c in Sources */ = {isa = PBXBuildFile; fileRef = 41C10AAE27EEB2250042512F /* weather.c */; };
 		41C10AB127EF0DC70042512F /* math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41C10AB027EF0DC70042512F /* math.cpp */; };
 		41C10EB227F005210042512F /* liboflog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C10AB427F005200042512F /* liboflog.a */; };
@@ -85,7 +84,6 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
-		4112899427F06F2E002F56CD /* dicom.dic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dicom.dic; sourceTree = "<group>"; };
 		41C10AAE27EEB2250042512F /* weather.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = weather.c; path = ../src/weather.c; sourceTree = "<group>"; };
 		41C10AB027EF0DC70042512F /* math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = math.cpp; path = ../src/math.cpp; sourceTree = "<group>"; };
 		41C10AB427F005200042512F /* liboflog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liboflog.a; sourceTree = "<group>"; };
@@ -1450,7 +1448,6 @@
 		41C10B7B27F005210042512F /* config */ = {
 			isa = PBXGroup;
 			children = (
-				4112899427F06F2E002F56CD /* dicom.dic */,
 				41C10B7C27F005210042512F /* osconfig.h */,
 				41C10B7D27F005210042512F /* arith.h */,
 			);
@@ -2530,7 +2527,6 @@
 				41C10ED727F005220042512F /* shadow.def in Resources */,
 				41C10EDE27F005220042512F /* pessmove.def in Resources */,
 				41C10EDF27F005220042512F /* push.def in Resources */,
-				4112899527F06F2E002F56CD /* dicom.dic in Resources */,
 				41C10EE027F005220042512F /* pop.def in Resources */,
 				41C10ED927F005220042512F /* cnvrsn.def in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
@@ -2680,7 +2676,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DCMDICTPATH = abc/123;
 				DEVELOPMENT_TEAM = 527CGRH5A6;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
@@ -2814,7 +2809,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DCMDICTPATH = abc/123;
 				DEVELOPMENT_TEAM = 527CGRH5A6;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
@@ -2842,7 +2836,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DCMDICTPATH = abc/123;
 				DEVELOPMENT_TEAM = 527CGRH5A6;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
