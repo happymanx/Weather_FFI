@@ -14,6 +14,13 @@ typedef NameFunctionDart = Pointer<Int8> Function();
 typedef PrintAndGetFunction = Pointer<Int8> Function(Pointer<Int8>);
 typedef PrintAndGetFunctionDart = Pointer<Int8> Function(Pointer<Int8>);
 
+//
+typedef CppNumberFunction = Double Function();
+typedef CppNumberFunctionDart = double Function();
+typedef GetSumFunction = Int32 Function(Int32, Int32);
+typedef GetSumFunctionDart = int Function(int, int);
+
+
 class ThreeDayForecast extends Struct {
   // 1
   @Double()
@@ -58,6 +65,9 @@ class FFIBridge {
   NameFunctionDart _getName;
   PrintAndGetFunctionDart _printAndGet;
 
+  CppNumberFunctionDart _getCppNumber;
+  GetSumFunctionDart _getSum;
+
   FFIBridge() {
     // 1
     final dl = Platform.isAndroid
@@ -95,6 +105,12 @@ class FFIBridge {
     _printAndGet = _cPrintAndGetPtr.asFunction<PrintAndGetFunctionDart>();
     print('[Dart]: 有返回值 -> '+_printAndGet('我就是預設文'.toNativeUtf8().cast<Int8>())
         .cast<Utf8>().toDartString());
+
+    //
+    _getCppNumber = dl.lookupFunction<TemperatureFunction,
+        TemperatureFunctionDart>('get_cpp_number');
+    _getSum = dl.lookupFunction<GetSumFunction,
+        GetSumFunctionDart>('get_sum');
   }
 
   // 5
@@ -126,6 +142,11 @@ class FFIBridge {
     return _printAndGet(str.toNativeUtf8().cast<Int8>())
         .cast<Utf8>().toDartString();
   }
+
+  //
+  double getCppNumber() => _getCppNumber();
+
+  int getSum(int a, int b) => _getSum(a, b);
 }
 
 /*

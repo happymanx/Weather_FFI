@@ -138,6 +138,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () {
                   _show(_ffiBridge.printAndGet('猜猜我是誰？'));
                 }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.redAccent),
+                ),
+                child: const Text('Cpp Number'),
+                onPressed: () async {
+                  _show(_ffiBridge.getCppNumber());
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.redAccent),
+                ),
+                child: const Text('Cpp Get Sum'),
+                onPressed: () async {
+                  _show(_ffiBridge.getSum(7, 8));
+                }),
           ],
         ),
       ),
