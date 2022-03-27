@@ -20,6 +20,10 @@ typedef CppNumberFunctionDart = double Function();
 typedef GetSumFunction = Int32 Function(Int32, Int32);
 typedef GetSumFunctionDart = int Function(int, int);
 
+//
+typedef EchoSCUFunction = Int32 Function(Int32, Pointer<Int8>);
+typedef EchoSCUFunctionDart = int Function(int, Pointer<Int8>);
+
 
 class ThreeDayForecast extends Struct {
   // 1
@@ -68,6 +72,9 @@ class FFIBridge {
   CppNumberFunctionDart _getCppNumber;
   GetSumFunctionDart _getSum;
 
+  //
+  EchoSCUFunctionDart _echoSCU;
+
   FFIBridge() {
     // 1
     final dl = Platform.isAndroid
@@ -111,6 +118,10 @@ class FFIBridge {
         TemperatureFunctionDart>('get_cpp_number');
     _getSum = dl.lookupFunction<GetSumFunction,
         GetSumFunctionDart>('get_sum');
+
+    //
+    _echoSCU = dl.lookupFunction<EchoSCUFunction,
+        EchoSCUFunctionDart>('testECHO');
   }
 
   // 5
@@ -147,6 +158,11 @@ class FFIBridge {
   double getCppNumber() => _getCppNumber();
 
   int getSum(int a, int b) => _getSum(a, b);
+
+  //
+  int echoSCU(int number, String string) {
+    return _echoSCU(number, string.toNativeUtf8().cast<Int8>());
+  }
 }
 
 /*

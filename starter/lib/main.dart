@@ -92,9 +92,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
-              ),
                 child: const Text('Temperature'),
                 onPressed: () async {
                   _show(_ffiBridge.getTemperature());
@@ -153,6 +150,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Text('Cpp Get Sum'),
                 onPressed: () async {
                   _show(_ffiBridge.getSum(7, 8));
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+                ),
+                child: const Text('EchoSCU'),
+                onPressed: () async {
+                  _show(_ffiBridge.echoSCU(7, './echoscu -v -aet ECHOSCU -aec ANY-SCP 192.168.0.18 5678'));
                 }),
           ],
         ),
