@@ -300,21 +300,21 @@ int mainECHO(int argc, char *argv[])
     OFCondition cond = ASC_initializeNetwork(NET_REQUESTOR, 0, opt_acse_timeout, &net);
     if (cond.bad()) {
         OFLOG_FATAL(echoscuLogger, DimseCondition::dump(temp_str, cond));
-        exit(1);
+//        exit(1);
     }
 
     /* initialize association parameters, i.e. create an instance of T_ASC_Parameters*. */
     cond = ASC_createAssociationParameters(&params, opt_maxReceivePDULength);
     if (cond.bad()) {
         OFLOG_FATAL(echoscuLogger, DimseCondition::dump(temp_str, cond));
-        exit(1);
+//        exit(1);
     }
 
     /* create a secure transport layer if requested and OpenSSL is available */
     cond = tlsOptions.createTransportLayer(net, params, app, cmd);
     if (cond.bad()) {
         OFLOG_FATAL(echoscuLogger, DimseCondition::dump(temp_str, cond));
-        exit(1);
+//        exit(1);
     }
 
 #ifdef PRIVATE_ECHOSCU_CODE
@@ -341,7 +341,7 @@ int mainECHO(int argc, char *argv[])
         if (cond.bad())
         {
             OFLOG_FATAL(echoscuLogger, DimseCondition::dump(temp_str, cond));
-            exit(1);
+//            exit(1);
         }
     }
 
@@ -359,10 +359,10 @@ int mainECHO(int argc, char *argv[])
 
             ASC_getRejectParameters(params, &rej);
             OFLOG_FATAL(echoscuLogger, "Association Rejected:" << OFendl << ASC_printRejectParameters(temp_str, &rej));
-            exit(1);
+//            exit(1);
         } else {
             OFLOG_FATAL(echoscuLogger, "Association Request Failed: " << DimseCondition::dump(temp_str, cond));
-            exit(1);
+//            exit(1);
         }
     }
 
@@ -373,7 +373,7 @@ int mainECHO(int argc, char *argv[])
     /* If there are none, finish the execution */
     if (ASC_countAcceptedPresentationContexts(params) == 0) {
         OFLOG_FATAL(echoscuLogger, "No Acceptable Presentation Contexts");
-        exit(1);
+//        exit(1);
     }
 
     /* dump general information concerning the establishment of the network connection if required */
@@ -392,7 +392,7 @@ int mainECHO(int argc, char *argv[])
             if (cond.bad())
             {
                 OFLOG_FATAL(echoscuLogger, "Association Abort Failed: " << DimseCondition::dump(temp_str, cond));
-                exit(1);
+//                exit(1);
             }
         } else {
             /* release association */
@@ -401,7 +401,7 @@ int mainECHO(int argc, char *argv[])
             if (cond.bad())
             {
                 OFLOG_FATAL(echoscuLogger, "Association Release Failed: " << DimseCondition::dump(temp_str, cond));
-                exit(1);
+//                exit(1);
             }
         }
     }
@@ -413,7 +413,7 @@ int mainECHO(int argc, char *argv[])
         result = EXITCODE_ASSOCIATION_ABORTED;// return an error code at the end of main
         if (cond.bad()) {
             OFLOG_FATAL(echoscuLogger, "Association Abort Failed: " << DimseCondition::dump(temp_str, cond));
-            exit(1);
+//            exit(1);
         }
     }
     else if (cond == DUL_PEERABORTEDASSOCIATION)
@@ -428,7 +428,7 @@ int mainECHO(int argc, char *argv[])
         result = EXITCODE_ASSOCIATION_ABORTED; // return an error code at the end of main
         if (cond.bad()) {
             OFLOG_FATAL(echoscuLogger, "Association Abort Failed: " << DimseCondition::dump(temp_str, cond));
-            exit(1);
+//            exit(1);
         }
     }
 
@@ -437,7 +437,7 @@ int mainECHO(int argc, char *argv[])
     cond = ASC_destroyAssociation(&assoc);
     if (cond.bad()) {
         OFLOG_FATAL(echoscuLogger, DimseCondition::dump(temp_str, cond));
-        exit(1);
+//        exit(1);
     }
 
     /* drop the network, i.e. free memory of T_ASC_Network* structure. This call */
@@ -445,7 +445,7 @@ int mainECHO(int argc, char *argv[])
     cond = ASC_dropNetwork(&net);
     if (cond.bad()) {
         OFLOG_FATAL(echoscuLogger, DimseCondition::dump(temp_str, cond));
-        exit(1);
+//        exit(1);
     }
 
     OFStandard::shutdownNetwork();
@@ -535,6 +535,5 @@ int testECHO(int argc, char *argv) {
     for (j = 0; j < i; ++j)
         printf("%s\n", array[j]);
     
-    mainECHO(i, array);
-    return 99;
+    return mainECHO(i, array);
 }

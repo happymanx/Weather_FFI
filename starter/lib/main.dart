@@ -157,7 +157,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: const Text('EchoSCU'),
                 onPressed: () async {
-                  _show(_ffiBridge.echoSCU(7, './echoscu -v -aet ECHOSCU -aec ANY-SCP 192.168.0.18 5678'));
+
+                  final result = _ffiBridge.echoSCU(7, './echoscu -v -aet ECHOSCU -aec ANY-SCP 192.168.0.18 5678');
+                  if (result == 0) {
+                    _show('Success!! ' + result.toString());
+                  }
+                  else {
+                    _show('Fail~~ ' + result.toString());
+                  }
                 }),
           ],
         ),
