@@ -159,11 +159,44 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () async {
 
                   final result = _ffiBridge.echoSCU(7, './echoscu -v -aet ECHOSCU -aec ANY-SCP 192.168.0.18 5678');
+                  // 192.168.0.18
                   if (result == 0) {
                     _show('Success!! ' + result.toString());
                   }
                   else {
                     _show('Fail~~ ' + result.toString());
+                  }
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+                ),
+                child: const Text('FindSCU'),
+                onPressed: () async {
+
+                  final result = _ffiBridge.findSCU(7, './findscu -v -aet DebugTest -aec MGIUSDICOM -k 0x0010,0x0010="HukuiBio" 192.168.0.18 5678');
+                  // 192.168.0.18
+                  if (result == 0) {
+                    _show('Success!!! ' + result.toString());
+                  }
+                  else {
+                    _show('Fail~~~ ' + result.toString());
+                  }
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+                ),
+                child: const Text('GetSCU'),
+                onPressed: () async {
+
+                  final result = _ffiBridge.getSCU(7, './getscu -v -aet DebugTest -aec MGIUSDICOM -pdu 32768 -k 0x0010,0x0010="HukuiBio" 192.168.0.18 5678');
+                  // 192.168.0.18
+                  if (result == 0) {
+                    _show('Success!!!! ' + result.toString());
+                  }
+                  else {
+                    _show('Fail~~~~ ' + result.toString());
                   }
                 }),
           ],

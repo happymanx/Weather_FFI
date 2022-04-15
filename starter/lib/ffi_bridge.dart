@@ -23,6 +23,10 @@ typedef GetSumFunctionDart = int Function(int, int);
 //
 typedef EchoSCUFunction = Int32 Function(Int32, Pointer<Int8>);
 typedef EchoSCUFunctionDart = int Function(int, Pointer<Int8>);
+typedef FindSCUFunction = Int32 Function(Int32, Pointer<Int8>);
+typedef FindSCUFunctionDart = int Function(int, Pointer<Int8>);
+typedef GetSCUFunction = Int32 Function(Int32, Pointer<Int8>);
+typedef GetSCUFunctionDart = int Function(int, Pointer<Int8>);
 
 
 class ThreeDayForecast extends Struct {
@@ -74,6 +78,8 @@ class FFIBridge {
 
   //
   EchoSCUFunctionDart _echoSCU;
+  FindSCUFunctionDart _findSCU;
+  GetSCUFunctionDart _getSCU;
 
   FFIBridge() {
     // 1
@@ -122,6 +128,10 @@ class FFIBridge {
     //
     _echoSCU = dl.lookupFunction<EchoSCUFunction,
         EchoSCUFunctionDart>('testECHO');
+    _findSCU = dl.lookupFunction<FindSCUFunction,
+        FindSCUFunctionDart>('testFIND');
+    _getSCU = dl.lookupFunction<GetSCUFunction,
+        GetSCUFunctionDart>('testGET');
   }
 
   // 5
@@ -162,6 +172,12 @@ class FFIBridge {
   //
   int echoSCU(int number, String string) {
     return _echoSCU(number, string.toNativeUtf8().cast<Int8>());
+  }
+  int findSCU(int number, String string) {
+    return _findSCU(number, string.toNativeUtf8().cast<Int8>());
+  }
+  int getSCU(int number, String string) {
+    return _getSCU(number, string.toNativeUtf8().cast<Int8>());
   }
 }
 

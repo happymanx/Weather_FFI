@@ -523,7 +523,7 @@ int testECHO(int argc, char *argv) {
     
     int i = 0;
     char *p = strtok (argv, " ");
-    char *array[10];
+    char *array[20];
 
     while (p != NULL)
     {
