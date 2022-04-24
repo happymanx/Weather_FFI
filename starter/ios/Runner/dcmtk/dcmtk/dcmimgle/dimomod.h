@@ -23,11 +23,11 @@
 #ifndef DIMOMOD_H
 #define DIMOMOD_H
 
-#include "osconfig.h"
-#include "ofcast.h"
+#include "dcmtk/config/osconfig.h"
+#include "dcmtk/ofstd/ofcast.h"
 
-#include "diluptab.h"
-#include "diobjcou.h"
+#include "dcmtk/dcmimgle/diluptab.h"
+#include "dcmtk/dcmimgle/diobjcou.h"
 
 
 /*------------------------*

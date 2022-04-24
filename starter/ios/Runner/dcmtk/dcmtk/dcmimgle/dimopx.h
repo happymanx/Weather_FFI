@@ -23,11 +23,11 @@
 #ifndef DIMOPX_H
 #define DIMOPX_H
 
-#include "osconfig.h"
-#include "ofcast.h"
+#include "dcmtk/config/osconfig.h"
+#include "dcmtk/ofstd/ofcast.h"
 
-#include "dipixel.h"
-#include "dimomod.h"
+#include "dcmtk/dcmimgle/dipixel.h"
+#include "dcmtk/dcmimgle/dimomod.h"
 
 
 /*------------------------*

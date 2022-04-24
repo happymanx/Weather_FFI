@@ -35,7 +35,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
+import 'dart:io';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'ffi_bridge.dart';
 
 void main() {
@@ -199,9 +202,61 @@ class _MyHomePageState extends State<MyHomePage> {
                     _show('Fail~~~~ ' + result.toString());
                   }
                 }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+                ),
+                child: const Text('Img2dcm'),
+                onPressed: () async {
+                  final appDocDir = await getApplicationDocumentsDirectory();
+                  final appDocPath = appDocDir.path;
+                  final imagePath = '$appDocPath/imagetest.jpg';
+                  final dcmPath = '$appDocPath/out.dcm';
+
+                  // 取得網路圖片並儲存到 App
+                  _fileFromImageUrl();
+
+                  final result = _ffiBridge.img2dcm(7, './img2dcm '+ imagePath + ' ' + dcmPath + ' -k PatientName=HappyDog -k PatientID=7777');
+                  // ./img2dcm dog.jpg outdog.dcm -k PatientName=HappyDog -k PatientID=7777
+                  if (result == 0) {
+                    _show('Success!!! ' + result.toString());
+                  }
+                  else {
+                    _show('Fail~~~ ' + result.toString());
+                  }
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+                ),
+                child: const Text('Dcmdjpeg'),
+                onPressed: () async {
+                  final appDocDir = await getApplicationDocumentsDirectory();
+                  final appDocPath = appDocDir.path;
+                  final dcmPath = '$appDocPath/out.dcm';
+                  final dcm2Path = '$appDocPath/out2.dcm';
+
+                  final result = _ffiBridge.dcmdjpeg(7, './dcmdjpeg '+ dcmPath + ' ' + dcm2Path);
+                  // ./dcmdjpeg outdog.dcm outdog2.dcm
+                  if (result == 0) {
+                    _show('Success!!! ' + result.toString());
+                  }
+                  else {
+                    _show('Fail~~~ ' + result.toString());
+                  }
+                }),
           ],
         ),
       ),
     );
+  }
+
+  Future<File> _fileFromImageUrl() async {
+    final url = Uri.parse('https://thumbs.dreamstime.com/b/hund-open-mouth-3635912.jpg');
+    final response = await http.get(url);
+    final documentDirectory = await getApplicationDocumentsDirectory();
+    final file = File(documentDirectory.path+'/imagetest.jpg');
+    file.writeAsBytesSync(response.bodyBytes);
+    return file;
   }
 }

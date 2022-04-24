@@ -23,9 +23,9 @@
 #ifndef DLDEFINE_H
 #define DLDEFINE_H
 
-#include "dcmtk/config/osconfig.h"
+#include "osconfig.h"
 
-#include "dcmtk/ofstd/ofdefine.h"
+#include "ofdefine.h"
 
 
 #ifdef dcmjpls_EXPORTS

@@ -23,13 +23,13 @@
 #ifndef DIOBJCOU_H
 #define DIOBJCOU_H
 
-#include "osconfig.h"
+#include "dcmtk/config/osconfig.h"
 
 #ifdef WITH_THREADS
-#include "ofthread.h"
+#include "dcmtk/ofstd/ofthread.h"
 #endif
 
-#include "didefine.h"
+#include "dcmtk/dcmimgle/didefine.h"
 
 
 /*---------------------*

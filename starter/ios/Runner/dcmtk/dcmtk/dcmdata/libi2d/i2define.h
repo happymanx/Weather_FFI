@@ -11,7 +11,7 @@
  *    D-26121 Oldenburg, Germany
  *
  *
- *  Module:  dcmjpeg
+ *  Module:  dcmdata
  *
  *  Author:  Uli Schlachter
  *
@@ -20,19 +20,19 @@
  */
 
 
-#ifndef DJDEFINE_H
-#define DJDEFINE_H
+#ifndef I2DEFINE_H
+#define I2DEFINE_H
 
-#include "osconfig.h"
+#include "osconfig.h"    /* make sure OS specific configuration is included first */
 
 #include "ofdefine.h"
 
 
-#ifdef dcmjpeg_EXPORTS
-#define DCMTK_DCMJPEG_EXPORT DCMTK_DECL_EXPORT
+#ifdef i2d_EXPORTS
+#define DCMTK_I2D_EXPORT DCMTK_DECL_EXPORT
 #else
-#define DCMTK_DCMJPEG_EXPORT DCMTK_DECL_IMPORT
+#define DCMTK_I2D_EXPORT DCMTK_DECL_IMPORT
 #endif
 
 
-#endif
+#endif // DCDEFINE_H

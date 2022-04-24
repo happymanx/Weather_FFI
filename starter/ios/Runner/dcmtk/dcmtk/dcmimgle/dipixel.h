@@ -23,9 +23,9 @@
 #ifndef DIPIXEL_H
 #define DIPIXEL_H
 
-#include "osconfig.h"
+#include "dcmtk/config/osconfig.h"
 
-#include "diutils.h"
+#include "dcmtk/dcmimgle/diutils.h"
 
 
 /*---------------------*

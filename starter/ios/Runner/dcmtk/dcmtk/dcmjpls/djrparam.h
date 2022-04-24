@@ -22,9 +22,9 @@
 #ifndef DCMJPLS_DJRPARAM_H
 #define DCMJPLS_DJRPARAM_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/dcmdata/dcpixel.h" /* for class DcmRepresentationParameter */
-#include "dcmtk/dcmjpls/dldefine.h"
+#include "osconfig.h"
+#include "dcpixel.h" /* for class DcmRepresentationParameter */
+#include "dldefine.h"
 
 /** representation parameter for JPEG-LS
  */

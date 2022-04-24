@@ -22,11 +22,11 @@
 #ifndef DCMJPLS_DJENCODE_H
 #define DCMJPLS_DJENCODE_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/ofstd/oftypes.h"  /* for OFBool */
-#include "dcmtk/dcmjpls/djlsutil.h"
-#include "dcmtk/dcmdata/dctypes.h"  /* for Uint32 */
-#include "dcmtk/dcmjpls/djcparam.h" /* for class DJLSCodecParameter */
+#include "osconfig.h"
+#include "oftypes.h"  /* for OFBool */
+#include "djlsutil.h"
+#include "dctypes.h"  /* for Uint32 */
+#include "djcparam.h" /* for class DJLSCodecParameter */
 
 class DJLSCodecParameter;
 class DJLSLosslessEncoder;

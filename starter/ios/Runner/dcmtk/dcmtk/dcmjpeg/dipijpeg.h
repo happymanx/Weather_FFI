@@ -23,10 +23,10 @@
 #ifndef DIPIJPEG_H
 #define DIPIJPEG_H
 
-#include "dcmtk/config/osconfig.h"
+#include "osconfig.h"
 
-#include "dcmtk/dcmimgle/diplugin.h"
-#include "dcmtk/dcmjpeg/djutils.h"
+#include "diplugin.h"
+#include "djutils.h"
 
 
 /*------------------------*
@@ -43,7 +43,7 @@ class DiImage;
 /** Implementation of a JPEG plugin for the dcmimgle/dcmimage library
  */
 class DCMTK_DCMJPEG_EXPORT DiJPEGPlugin
-  : public DiPluginFormat
+//  : public DiPluginFormat
 {
 
   public:

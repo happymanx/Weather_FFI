@@ -22,10 +22,10 @@
 #ifndef DCMJPLS_DJLSUTILS_H
 #define DCMJPLS_DJLSUTILS_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/ofstd/ofcond.h"   /* for class OFCondition */
-#include "dcmtk/oflog/oflog.h"
-#include "dcmtk/dcmjpls/dldefine.h"
+#include "osconfig.h"
+#include "ofcond.h"   /* for class OFCondition */
+#include "oflog.h"
+#include "dldefine.h"
 
 
 #define DCMJPLS_CHARLS_VERSION_STRING "CharLS, Version 1.0 (modified)"

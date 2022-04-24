@@ -22,11 +22,11 @@
 #ifndef DCMJPLS_DJCODEC_H
 #define DCMJPLS_DJCODEC_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/dcmdata/dccodec.h"  /* for class DcmCodec */
-#include "dcmtk/dcmdata/dcofsetl.h" /* for struct DcmOffsetList */
-#include "dcmtk/ofstd/ofstring.h"   /* for class OFString */
-#include "dcmtk/dcmjpls/dldefine.h"
+#include "osconfig.h"
+#include "dccodec.h"  /* for class DcmCodec */
+#include "dcofsetl.h" /* for struct DcmOffsetList */
+#include "ofstring.h"   /* for class OFString */
+#include "dldefine.h"
 
 class DJLSRepresentationParameter;
 class DJLSCodecParameter;

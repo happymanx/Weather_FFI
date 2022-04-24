@@ -23,10 +23,10 @@
 #ifndef DIMOOPX_H
 #define DIMOOPX_H
 
-#include "osconfig.h"
-#include "diutils.h"
+#include "dcmtk/config/osconfig.h"
+#include "dcmtk/dcmimgle/diutils.h"
 
-#include "ofstream.h"
+#include "dcmtk/ofstd/ofstream.h"
 
 
 /*------------------------*

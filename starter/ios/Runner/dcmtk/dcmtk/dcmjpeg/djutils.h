@@ -22,11 +22,11 @@
 #ifndef DJUTILS_H
 #define DJUTILS_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/ofstd/ofcond.h"      /* for class OFCondition */
-#include "dcmtk/dcmimgle/diutils.h"  /* for EP_Interpretation */
-#include "dcmtk/oflog/oflog.h"
-#include "dcmtk/dcmjpeg/djdefine.h"
+#include "osconfig.h"
+#include "ofcond.h"      /* for class OFCondition */
+#include "diutils.h"  /* for EP_Interpretation */
+#include "oflog.h"
+#include "djdefine.h"
 
 
 // global definitions for logging mechanism provided by the oflog module

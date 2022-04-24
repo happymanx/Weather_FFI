@@ -23,11 +23,11 @@
 #ifndef DILUPTAB_H
 #define DILUPTAB_H
 
-#include "osconfig.h"
-#include "dctagkey.h"
+#include "dcmtk/config/osconfig.h"
+#include "dcmtk/dcmdata/dctagkey.h"
 
-#include "dibaslut.h"
-#include "diobjcou.h"
+#include "dcmtk/dcmimgle/dibaslut.h"
+#include "dcmtk/dcmimgle/diobjcou.h"
 
 
 /*------------------------*

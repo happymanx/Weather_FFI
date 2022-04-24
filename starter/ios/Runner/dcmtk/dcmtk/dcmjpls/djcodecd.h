@@ -22,10 +22,10 @@
 #ifndef DCMJPLS_DJCODECD_H
 #define DCMJPLS_DJCODECD_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/dcmdata/dccodec.h"  /* for class DcmCodec */
-#include "dcmtk/ofstd/ofstring.h"
-#include "dcmtk/dcmjpls/dldefine.h"
+#include "osconfig.h"
+#include "dccodec.h"  /* for class DcmCodec */
+#include "ofstring.h"
+#include "dldefine.h"
 
 /* forward declaration */
 class DJLSCodecParameter;

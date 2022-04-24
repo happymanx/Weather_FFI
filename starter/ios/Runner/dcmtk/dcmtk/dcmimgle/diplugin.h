@@ -23,7 +23,7 @@
 #ifndef DIPLUGIN_H
 #define DIPLUGIN_H
 
-#include "dcmtk/config/osconfig.h"
+#include "osconfig.h"
 
 
 /*------------------------*
@@ -42,33 +42,33 @@ class DiImage;
  *  plugable image output formats for the dcmimle/dcmimage library. An example
  *  implementation can be found in dcmjpeg/libsrc/dipijpeg.cc (JPEG plugin).
  */
-class DCMTK_DCMIMGLE_EXPORT DiPluginFormat
-{
-
-  public:
-
-    /** destructor (virtual)
-     */
-    virtual ~DiPluginFormat() {}
-
-    /** write given image to a file stream (abstract)
-     *
-     ** @param  image   pointer to DICOM image object to be written
-     *  @param  stream  stream to which the image is written (open in binary mode!)
-     *  @param  frame   index of frame used for output (default: first frame = 0)
-     *
-     ** @return true if successful, false otherwise
-     */
-    virtual int write(DiImage *image,
-                      FILE *stream,
-                      const unsigned long frame = 0) const = 0;
-
-  protected:
-
-    /** constructor (protected)
-     */
-    DiPluginFormat() {}
-};
+//class DCMTK_DCMIMGLE_EXPORT DiPluginFormat
+//{
+//
+//  public:
+//
+//    /** destructor (virtual)
+//     */
+//    virtual ~DiPluginFormat() {}
+//
+//    /** write given image to a file stream (abstract)
+//     *
+//     ** @param  image   pointer to DICOM image object to be written
+//     *  @param  stream  stream to which the image is written (open in binary mode!)
+//     *  @param  frame   index of frame used for output (default: first frame = 0)
+//     *
+//     ** @return true if successful, false otherwise
+//     */
+//    virtual int write(DiImage *image,
+//                      FILE *stream,
+//                      const unsigned long frame = 0) const = 0;
+//
+//  protected:
+//
+//    /** constructor (protected)
+//     */
+//    DiPluginFormat() {}
+//};
 
 
 #endif

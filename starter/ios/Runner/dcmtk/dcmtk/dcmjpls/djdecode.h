@@ -22,9 +22,9 @@
 #ifndef DCMJPLS_DJDECODE_H
 #define DCMJPLS_DJDECODE_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/ofstd/oftypes.h"      /* for OFBool */
-#include "dcmtk/dcmjpls/djlsutil.h"  /* for enums */
+#include "osconfig.h"
+#include "oftypes.h"      /* for OFBool */
+#include "djlsutil.h"  /* for enums */
 
 class DJLSCodecParameter;
 class DJLSLosslessDecoder;

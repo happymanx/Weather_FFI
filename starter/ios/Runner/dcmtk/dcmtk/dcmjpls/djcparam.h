@@ -22,9 +22,9 @@
 #ifndef DCMJPLS_DJCPARAM_H
 #define DCMJPLS_DJCPARAM_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/dcmdata/dccodec.h" /* for DcmCodecParameter */
-#include "dcmtk/dcmjpls/djlsutil.h" /* for enums */
+#include "osconfig.h"
+#include "dccodec.h" /* for DcmCodecParameter */
+#include "djlsutil.h" /* for enums */
 
 /** codec parameter for JPEG-LS codecs
  */

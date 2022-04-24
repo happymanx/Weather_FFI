@@ -23,11 +23,11 @@
 #ifndef DIBASLUT_H
 #define DIBASLUT_H
 
-#include "osconfig.h"
-#include "ofstring.h"
-#include "ofcast.h"
+#include "dcmtk/config/osconfig.h"
+#include "dcmtk/ofstd/ofstring.h"
+#include "dcmtk/ofstd/ofcast.h"
 
-#include "diutils.h"
+#include "dcmtk/dcmimgle/diutils.h"
 
 
 /*---------------------*

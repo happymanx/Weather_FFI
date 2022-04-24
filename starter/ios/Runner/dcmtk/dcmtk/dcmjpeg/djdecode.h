@@ -22,9 +22,9 @@
 #ifndef DJDECODE_H
 #define DJDECODE_H
 
-#include "dcmtk/config/osconfig.h"
-#include "dcmtk/ofstd/oftypes.h"  /* for OFBool */
-#include "dcmtk/dcmjpeg/djutils.h"
+#include "osconfig.h"
+#include "oftypes.h"  /* for OFBool */
+#include "djutils.h"
 
 class DJCodecParameter;
 class DJDecoderBaseline;
