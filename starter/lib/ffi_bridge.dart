@@ -31,6 +31,8 @@ typedef Img2dcmFunction = Int32 Function(Int32, Pointer<Int8>);
 typedef Img2dcmFunctionDart = int Function(int, Pointer<Int8>);
 typedef DcmdjpegFunction = Int32 Function(Int32, Pointer<Int8>);
 typedef DcmdjpegFunctionDart = int Function(int, Pointer<Int8>);
+typedef StoreSCUFunction = Int32 Function(Int32, Pointer<Int8>);
+typedef StoreSCUFunctionDart = int Function(int, Pointer<Int8>);
 
 
 class ThreeDayForecast extends Struct {
@@ -86,6 +88,7 @@ class FFIBridge {
   GetSCUFunctionDart _getSCU;
   Img2dcmFunctionDart _img2dcm;
   DcmdjpegFunctionDart _dcmdjpeg;
+  StoreSCUFunctionDart _storeSCU;
 
   FFIBridge() {
     // 1
@@ -142,6 +145,9 @@ class FFIBridge {
         GetSCUFunctionDart>('testImg2dcm');
     _dcmdjpeg = dl.lookupFunction<DcmdjpegFunction,
         DcmdjpegFunctionDart>('testDcmdjpeg');
+    _storeSCU = dl.lookupFunction<StoreSCUFunction,
+        StoreSCUFunctionDart>('testSTORE');
+
   }
 
   // 5
@@ -194,6 +200,9 @@ class FFIBridge {
   }
   int dcmdjpeg(int number, String string) {
     return _dcmdjpeg(number, string.toNativeUtf8().cast<Int8>());
+  }
+  int storeSCU(int number, String string) {
+    return _storeSCU(number, string.toNativeUtf8().cast<Int8>());
   }
 }
 

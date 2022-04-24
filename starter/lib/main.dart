@@ -216,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   // 取得網路圖片並儲存到 App
                   _fileFromImageUrl();
 
-                  final result = _ffiBridge.img2dcm(7, './img2dcm '+ imagePath + ' ' + dcmPath + ' -k PatientName=HappyDog -k PatientID=7777');
+                  final result = _ffiBridge.img2dcm(7, './img2dcm '+ imagePath + ' ' + dcmPath + ' -k PatientName=HappyDogQ! -k PatientID=2204241');
                   // ./img2dcm dog.jpg outdog.dcm -k PatientName=HappyDog -k PatientID=7777
                   if (result == 0) {
                     _show('Success!!! ' + result.toString());
@@ -244,6 +244,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   else {
                     _show('Fail~~~ ' + result.toString());
                   }
+                  final File dcmFile = File(dcmPath);
+                  dcmFile.delete();
+                }),
+            ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.lightGreen),
+                ),
+                child: const Text('StoreSCU'),
+                onPressed: () async {
+                  final appDocDir = await getApplicationDocumentsDirectory();
+                  final appDocPath = appDocDir.path;
+                  final dcm2Path = '$appDocPath/out2.dcm';
+
+                  final result = _ffiBridge.storeSCU(7, './storescu 192.168.0.18 5678 ' + dcm2Path);
+                  // ./storescu 192.168.0.18 5678 outdog2.dcm
+                  if (result == 0) {
+                    _show('Success!!! ' + result.toString());
+                  }
+                  else {
+                    _show('Fail~~~ ' + result.toString());
+                  }
+                  final File dcmFile = File(dcm2Path);
+                  dcmFile.delete();
                 }),
           ],
         ),
@@ -252,7 +275,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<File> _fileFromImageUrl() async {
-    final url = Uri.parse('https://thumbs.dreamstime.com/b/hund-open-mouth-3635912.jpg');
+    final url = Uri.parse('https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg');
+    // https://thumbs.dreamstime.com/b/hund-open-mouth-3635912.jpg
     final response = await http.get(url);
     final documentDirectory = await getApplicationDocumentsDirectory();
     final file = File(documentDirectory.path+'/imagetest.jpg');

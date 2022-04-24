@@ -13,6 +13,7 @@
 		41890BA527F434AA007A4DD7 /* getscu.cc in Sources */ = {isa = PBXBuildFile; fileRef = 41890BA327F434AA007A4DD7 /* getscu.cc */; };
 		41890BB1280F3008007A4DD7 /* img2dcm.cc in Sources */ = {isa = PBXBuildFile; fileRef = 41890BB0280F3008007A4DD7 /* img2dcm.cc */; };
 		41890BC32810180A007A4DD7 /* libi2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41890BC22810180A007A4DD7 /* libi2d.a */; };
+		41BA14192815915C00BA3AE9 /* storescu.cc in Sources */ = {isa = PBXBuildFile; fileRef = 41BA14182815915C00BA3AE9 /* storescu.cc */; };
 		41C10AAF27EEB2250042512F /* weather.c in Sources */ = {isa = PBXBuildFile; fileRef = 41C10AAE27EEB2250042512F /* weather.c */; };
 		41C10AB127EF0DC70042512F /* math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41C10AB027EF0DC70042512F /* math.cpp */; };
 		41C10EB227F005210042512F /* liboflog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41C10AB427F005200042512F /* liboflog.a */; };
@@ -177,6 +178,7 @@
 		41BA14152815374900BA3AE9 /* djcodece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = djcodece.h; sourceTree = "<group>"; };
 		41BA14162815374900BA3AE9 /* djcparam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = djcparam.h; sourceTree = "<group>"; };
 		41BA14172815374900BA3AE9 /* djcodecd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = djcodecd.h; sourceTree = "<group>"; };
+		41BA14182815915C00BA3AE9 /* storescu.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = storescu.cc; path = ../src/storescu.cc; sourceTree = "<group>"; };
 		41C10AAE27EEB2250042512F /* weather.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = weather.c; path = ../src/weather.c; sourceTree = "<group>"; };
 		41C10AB027EF0DC70042512F /* math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = math.cpp; path = ../src/math.cpp; sourceTree = "<group>"; };
 		41C10AB427F005200042512F /* liboflog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liboflog.a; sourceTree = "<group>"; };
@@ -2481,6 +2483,7 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
+				41BA14182815915C00BA3AE9 /* storescu.cc */,
 				41C30FA528151CF900E555DA /* dcmdjpeg.cc */,
 				41890BB0280F3008007A4DD7 /* img2dcm.cc */,
 				41890BA227F434AA007A4DD7 /* findscu.cc */,
@@ -2688,6 +2691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BA14192815915C00BA3AE9 /* storescu.cc in Sources */,
 				41C30FA628151CF900E555DA /* dcmdjpeg.cc in Sources */,
 				41890BB1280F3008007A4DD7 /* img2dcm.cc in Sources */,
 				41890BA527F434AA007A4DD7 /* getscu.cc in Sources */,
