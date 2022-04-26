@@ -1,0 +1,40 @@
+# create library from source files
+DCMTK_ADD_LIBRARY(dcmfg
+  concatenationcreator
+  concatenationloader
+  fg
+  fgbase
+  fgctacquisitiondetails
+  fgctacquisitiontype
+  fgctadditionalxraysource
+  fgctexposure
+  fgctgeometry
+  fgctimageframetype
+  fgctposition
+  fgctreconstruction
+  fgcttabledynamics
+  fgctxraydetails
+  fgderimg
+  fgfact
+  fgfracon
+  fgframeanatomy
+  fgframevoilut
+  fgpixeltransform
+  fgimagedatatype
+  fginterface
+  fgirradiationeventid
+  fgpixmsr
+  fgparametricmapframetype
+  fgplanor
+  fgplanorvol
+  fgplanpo
+  fgplanposvol
+  fgrealworldvaluemapping
+  fgseg
+  fgtemporalposition
+  fgusimagedescription
+  fgtypes
+  stack
+  stackinterface)
+
+DCMTK_TARGET_LINK_MODULES(dcmfg dcmiod dcmdata ofstd oflog)
